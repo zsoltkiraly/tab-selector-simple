@@ -1,0 +1,180 @@
+section.tab-selector {
+    padding: 0 20px;
+    max-width: 980px;
+    width: 100%;
+    margin: 50px auto;
+    font-size: 1.2em;
+    line-height: 1.5;
+
+    @include full-block();
+
+    .tab-container {
+        @include full-block();
+
+        .tabs-navigation-container {
+            .select-placeholder { display: none; }
+        }
+
+        ul.tab-select-container {
+            margin: 0;
+            padding: 0;
+            margin-left: -10px;
+            margin-bottom: 30px;
+
+            @include flex-box();
+
+            li {
+                list-style-type: none;
+                padding: 10px 15px;
+                width: 33.3333%;
+                margin-left: 10px;
+                text-align: center;
+                border: 2px solid $blue;
+                color: $black;
+                cursor: pointer;
+
+                @include align-items(center);
+                @include justify-content(center);
+                @include flex-box();
+                @include border-radius(2px);
+                @include transition(background-color .3s ease, color .3s ease);
+
+                &.active { background-color: $blue; color: white; }
+                &:hover { background-color: $blue; color: white; }
+            }
+        }
+
+        .tab-content-container {
+            @include full-block();
+
+            .tab-content {
+                display: none;
+
+                img { width: 100%; max-width: 100%; }
+
+                p {
+                    margin-bottom: 20px;
+                    font-style: italic;
+
+                    @include full-block();
+
+                    &:last-of-type { margin-bottom: 0; }
+                }
+
+                &.fade {
+                    @include opacity(0);
+                    @include transition(opacity .7s ease-out)
+                }
+
+                &.active { display: block; }
+                &.in { @include opacity(1); }
+
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        .tab-container {
+            margin-bottom: 30px;
+
+            ul.tab-select-container { margin-bottom: 30px; }
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        .tab-container {
+            .tabs-navigation-container {
+                position: relative;
+                height: auto;
+                margin-bottom: 25px;
+
+                .select-placeholder {
+                    display: block;
+                    cursor: pointer;
+                    position: relative;
+                    padding: 15px 45px 15px 15px;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 600;
+                    color: white;
+                    background-color: $blue;
+
+                    @include border-top-radius(4px);
+
+                    h4 { padding-left: 30px; }
+
+                    &.collapsed, &.expanded {
+                        h4 {
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                right: 20px;
+                                top: 0;
+                                bottom: 0;
+                                height: 0;
+                                margin: auto;
+                                border: solid white;
+                                border-width: 0 2px 2px 0;
+                                display: inline-block;
+                                padding: 5px;
+
+                                @include transition(all .3s ease-out);
+                            }
+                        }
+                    }
+
+                    &.collapsed {
+                        @include border-bottom-radius(4px);
+
+                        h4 {  &:after { @include rotate(45deg); } }
+                    }
+
+                    &.expanded {
+                        h4 {  &:after { @include rotate(-135deg);  } }
+                    }
+
+                    &.one { cursor: default; h4 { &:after { display: none; }}}
+                }
+
+                ul.tab-select-container {
+                    display: block;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    margin-bottom: 0;
+                    height: auto;
+                    z-index: 2;
+                    background-color: $black;
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
+
+                    @include transition(max-height .2s ease);
+
+                    li {
+                        color: white;
+                        display: block;
+                        width: 100%;
+                        max-width: 100%;
+                        padding: 15px;
+                        margin: 0;
+                        border: 0;
+                        border-left: 2px solid $blue;
+                        border-right: 2px solid $blue;
+                        border-bottom: 2px solid $blue;
+
+                        &.active { display: none; }
+
+                        &:last-child {
+                            @include border-bottom-radius(4px);
+                        }
+                    }
+
+                    &.in-active { display: none; }
+                }
+            }
+        }
+    }
+}

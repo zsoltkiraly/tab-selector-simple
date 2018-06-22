@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Tab selector simple v1.0.5 by Zsolt Kiraly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Tab selector simple<span>JavaScript Tab selector simple v1.0.5 by Zsolt Kiraly</span></h1>
+    </header>
+
+    <section class="basic-content">
+        <h2>Sed et volutpat ligula</h2>
+        <p>Donec quis lorem sit amet tortor varius consectetur. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum quam diam, sit amet iaculis ex commodo id. Maecenas vitae finibus massa. Suspendisse potenti. Donec pulvinar nunc ut elit porttitor mattis.</p>
+
+        <p>Cras non arcu quis turpis lacinia suscipit et a purus. Mauris eu maximus massa. Nam sed vestibulum orci, ut cursus neque. Fusce eget dui eros. Mauris dictum lacus a eros fermentum, eu fringilla elit scelerisque. Sed et varius mauris. Pellentesque in ligula a mi lobortis rutrum. Vestibulum ac pretium nulla. Pellentesque tempor augue at purus tincidunt, maximus semper nisl blandit.</p>
+
+        <p>Mauris fermentum elementum urna, sed blandit metus elementum at. Nullam ac dui non orci volutpat lobortis in quis libero. Duis dignissim rutrum leo ac mollis. Sed et volutpat ligula, sollicitudin porttitor elit. Maecenas faucibus molestie mauris, ut efficitur lorem placerat.</p>
+    </section>
+
+	<section id="tab-selector-1" class="tab-selector">
+	    <div class="tab-container">
+
+	        <div class="tabs-navigation-container">
+	            <div class="select-placeholder collapsed"><h4>Duis aliquet urnaet molestie</h4></div>
+	            <ul class="tab-select-container collapsed in-active">
+	                <li class="active"><h4>Duis aliquet urnaet molestie</h4></li>
+	                <li><h4>Aertean nonfaucibus nisletiam </h4></li>
+	                <li><h4>Curabitur sagittis ornare iaculis</h4></li>
+	            </ul>
+	        </div>
+
+	        <div class="tab-content-container">
+
+	            <div class="fade active in tab-content">
+	            	<p>Curabitur quis purus sem. Cras quam nulla, lacinia nec fermentum faucibus, volutpat ut mi. Fusce ullamcorper finibus lacus, ac imperdiet felis ornare eget.</p>
+
+	                <p>Nunc sit amet augue imperdiet, consequat ante eu, pretium nisi. Donec ac tristique ante, non bibendum leo. Maecenas lacinia eu justo sed tincidunt. Curabitur sagittis ornare iaculis.</p>
+
+	                <p>Aenean non faucibus nisl. Etiam congue, felis vel sagittis feugiat, leo sem convallis nisl, sit amet vulputate quam odio in augue. Nulla velit nisl, sollicitudin sit amet volutpat non, consequat a quam. Donec id nisi bibendum, lobortis turpis in, fringilla risus.</p>
+	            </div>
+
+	            <div class="fade tab-content">
+	                <p>Aliquam rhoncus, turpis sit amet vulputate ultricies, nunc mi lobortis massa, ac cursus mi turpis eu tellus. Vestibulum sagittis ultrices augue, sed fringilla elit sagittis sit amet. In pellentesque dui quis rhoncus efficitur. Sed urna ante, facilisis quis arcu vel.</p>
+
+	                <p>Maecenas eget eros quis turpis interdum ornare id in dui. Fusce turpis turpis, vulputate et nibh in, mattis dictum lorem. Nunc sit amet augue imperdiet, consequat ante eu, pretium nisi.</p>
+	            </div>
+
+	            <div class="fade tab-content">
+	                <p>Sed urna ante, facilisis quis arcu vel, varius condimentum tortor. Mauris erat leo, placerat nec facilisis eget, luctus ac turpis. Curabitur ligula lorem, auctor eleifend ornare in, vehicula sed leo. Proin dictum malesuada orci at efficitur.</p>
+
+	                <p>Duis aliquet, urna et molestie aliquet, risus enim iaculis mi, sed maximus felis metus a ante. Phasellus sed orci sed lorem cursus cursus. Nulla fringilla ipsum ex, vitae elementum nisi tincidunt sit amet. Vivamus imperdiet vitae tortor ac hendrerit.</p>
+	            </div>
+
+	        </div>
+	    </div>
+	</section>
+
+	<script>
+		window.addEventListener('load', function(){
+			tabSelector.app({
+				namespace: 'tab-selector-1'
+			});
+		}, false);
+	</script>
+
+    <section class="basic-content">
+        <h2>Sed et volutpat ligula</h2>
+        <p>Donec quis lorem sit amet tortor varius consectetur. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum quam diam, sit amet iaculis ex commodo id. Maecenas vitae finibus massa. Suspendisse potenti. Donec pulvinar nunc ut elit porttitor mattis.</p>
+
+        <p>Cras non arcu quis turpis lacinia suscipit et a purus. Mauris eu maximus massa. Nam sed vestibulum orci, ut cursus neque. Fusce eget dui eros. Mauris dictum lacus a eros fermentum, eu fringilla elit scelerisque. Sed et varius mauris. Pellentesque in ligula a mi lobortis rutrum. Vestibulum ac pretium nulla. Pellentesque tempor augue at purus tincidunt, maximus semper nisl blandit.</p>
+
+        <p>Mauris fermentum elementum urna, sed blandit metus elementum at. Nullam ac dui non orci volutpat lobortis in quis libero. Duis dignissim rutrum leo ac mollis. Sed et volutpat ligula, sollicitudin porttitor elit. Maecenas faucibus molestie mauris, ut efficitur lorem placerat.</p>
+    </section>
+
+    <footer>
+        <span>GitHub:</span> <a href="https://github.com/zsoltkiraly" title="GitHub" target="_blank">https://github.com/zsoltkiraly</a>
+    </footer>
+
+</body>
+</html>
