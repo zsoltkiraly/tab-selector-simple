@@ -1,7 +1,7 @@
 # Tab selector simple v1.0.5 v1.1.4
 
 <br />
-<a href="http://zsoltkiraly.com/developments/tab-selector-simple/" target="_blank">DEMO PAGE</a>
+<a href="https://zsoltkiraly.com/developments/tab-selector-simple/" target="_blank">DEMO PAGE</a>
 
 #
 <br />
